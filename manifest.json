@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "Index Notch",
+  "description": "Keep and review your scroll location with a click",
+  "version": "0.0",
+  "icons": {
+    "48": "icons/bookmark-48.png",
+    "96": "icons/bookmark-96.png"
+  }
+}
