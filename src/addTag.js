@@ -28,6 +28,10 @@ function addTag([percentage, scrollY]) {
   tag.addEventListener("click", function scroll() {
     window.scrollTo(0, scrollY);
   });
+  tag.addEventListener("contextmenu", function rightClick(event) {
+    event.preventDefault();
+    tag.remove();
+  });
 }
 
 export default addTag;
