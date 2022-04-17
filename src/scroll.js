@@ -47,4 +47,4 @@ function getScrollPercentage() {
 }
 
 export default getScrollPercentage;
-export { _get_window_Yscroll };
+export { _get_window_Yscroll, _get_doc_height };

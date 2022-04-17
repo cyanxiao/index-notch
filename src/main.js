@@ -14,6 +14,9 @@ document.addEventListener("keydown", function shortcutDetected(event) {
   }
 });
 
+/**
+ * Click button to add position mark
+ */
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   console.log(
     sender.tab

@@ -19,7 +19,7 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "permissions": ["storage"],
+  "permissions": ["storage", "tabs"],
   "action": {
     "default_popup": "../popup/index.html"
   },
