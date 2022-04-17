@@ -1,4 +1,5 @@
 import getRandomColor from "./color";
+import anime from "animejs/lib/anime.es.js";
 
 function addTag(percentage) {
   const tag = document.createElement("div");
@@ -10,7 +11,20 @@ function addTag(percentage) {
   tag.style.right = "-50px";
   tag.style.top = `${percentage}vh`;
   tag.style.zIndex = 1000;
+  tag.style.cursor = "pointer";
   document.documentElement.append(tag);
+  tag.addEventListener("mouseover", function reaction() {
+    anime({
+      targets: tag,
+      translateX: -40,
+    });
+  });
+  tag.addEventListener("mouseleave", function reaction() {
+    anime({
+      targets: tag,
+      translateX: 0,
+    });
+  });
 }
 
 export default addTag;

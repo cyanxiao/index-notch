@@ -18,6 +18,7 @@
     "build": "parcel build src/manifest.json --target webext-prod --config @parcel/config-webextension"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "postcss": "^8.4.12"
   }
 }
