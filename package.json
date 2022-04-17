@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "@parcel/config-webextension": "^2.4.2-nightly.2676",
-    "parcel": "^2.0.0-nightly.1051"
+    "parcel": "^2.0.0-nightly.1051",
+    "tailwindcss": "^3.0.24"
   },
   "license": "GPL-3.0",
   "targets": {
