@@ -40,9 +40,11 @@ function _get_doc_height() {
  * Get current vertical scroll percentage
  */
 function getScrollPercentage() {
-  return (
-    ((_get_window_Yscroll() + _get_window_height()) / _get_doc_height()) * 100
-  );
+  return [
+    ((_get_window_Yscroll() + _get_window_height()) / _get_doc_height()) * 100,
+    _get_window_Yscroll(),
+  ];
 }
 
 export default getScrollPercentage;
+export { _get_window_Yscroll };

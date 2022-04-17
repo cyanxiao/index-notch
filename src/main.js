@@ -1,6 +1,8 @@
 import getScrollPercentage from "./scroll";
 import addTag from "./addTag";
 
+document.documentElement.style.scrollBehavior = "smooth";
+
 /**
  * Detect shortcut to add position mark
  */
