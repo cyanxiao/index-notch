@@ -22,5 +22,8 @@
   "permissions": ["storage"],
   "action": {
     "default_popup": "../popup/index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
   }
 }
