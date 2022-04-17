@@ -1,7 +1,7 @@
 {
   "devDependencies": {
-    "@parcel/config-webextension": "^2.4.1",
-    "parcel": "^2.4.1"
+    "@parcel/config-webextension": "^2.4.2-nightly.2676",
+    "parcel": "^2.0.0-nightly.1051"
   },
   "license": "GPL-3.0",
   "targets": {

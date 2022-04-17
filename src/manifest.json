@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Index Notch",
   "description": "Keep and review your scroll location with a click",
   "version": "0.0",
@@ -12,5 +12,12 @@
       "matches": ["http://*/*", "https://*/*"],
       "js": ["./main.js"]
     }
-  ]
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/index.png", "icons/index.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["storage"]
 }
