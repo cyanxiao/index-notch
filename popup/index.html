@@ -13,32 +13,36 @@
   </head>
   <body class="font-sans text-xl bg-yellow text-black">
     <button
+      id="addMark"
       class="bg-red ml-2 mr-2 mt-2 mb-0 w-60 text-white p-1 rounded-md hover:bg-lightred"
     >
       ADD MARK (ctrl + B)
     </button>
-    <p class="ml-2 mr-2 mt-2 mb-0">Report Bugs</p>
+    <p class="ml-2 mr-2 mt-2 mb-0" id="sns">Report Bugs</p>
     <button
       class="bg-blue ml-2 mr-2 mt-1 w-60 text-white p-1 rounded-md hover:bg-lightblue"
     >
       DM me on Twitter
     </button>
     <button
+      id="gh"
       class="bg-blue ml-2 mr-2 mt-1 mb-0 w-60 text-white p-1 rounded-md hover:bg-lightblue"
     >
       Github Issues
     </button>
     <p class="ml-2 mr-2 mt-2 mb-0">Smooth Scrolling</p>
     <button
+      id="smooth"
       class="bg-blue ml-2 mr-2 mt-1 mb-0 w-60 text-white p-1 rounded-md hover:bg-lightblue"
     >
       Turned On
     </button>
-    <p class="ml-2 mr-2 mt-2 mb-0">Persist Marks</p>
+    <p id="persistent" class="ml-2 mr-2 mt-2 mb-0">Persist Marks</p>
     <button
       class="bg-blue ml-2 mr-2 mt-1 mb-2 w-60 text-white p-1 rounded-md hover:bg-lightblue"
     >
       Turned Off
     </button>
+    <script src="./action.js"></script>
   </body>
 </html>

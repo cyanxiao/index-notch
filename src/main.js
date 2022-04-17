@@ -13,3 +13,17 @@ document.addEventListener("keydown", function shortcutDetected(event) {
     addTag(getScrollPercentage());
   }
 });
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  console.log(
+    sender.tab
+      ? "from a content script:" + sender.tab.url
+      : "from the extension"
+  );
+  if (request.mark === "current") {
+    console.log("button click detected");
+    console.log(getScrollPercentage());
+    addTag(getScrollPercentage());
+    sendResponse({ isAdd: "true" });
+  }
+});
