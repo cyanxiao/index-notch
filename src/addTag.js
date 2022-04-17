@@ -9,7 +9,7 @@ function addTag([percentage, scrollY]) {
   tag.style.backgroundColor = `${getRandomColor()}`;
   tag.style.borderRadius = "0px 22px 22px 0px";
   tag.style.left = "-50px";
-  tag.style.top = `${percentage}vh`;
+  tag.style.top = `calc(${percentage}vh - 30px)`;
   tag.style.zIndex = 1000;
   tag.style.cursor = "pointer";
   document.documentElement.append(tag);
