@@ -1,7 +1,8 @@
 import getScrollPercentage from "./scroll";
 import { getWindowYScroll, getDocHeight, getWindowHeight } from "./scroll";
 import addTag from "./addTag";
-import { saveMark, marks } from "./storage";
+import { marks } from "./storage";
+import anime from "animejs/lib/anime.es.js";
 
 document.documentElement.style.scrollBehavior = "smooth";
 
@@ -43,6 +44,10 @@ function updateMarksPosition() {
       mark["windowHeight"],
       getDocHeight()
     );
-    mark["tag"].style.top = `calc(${percentage}vh - 30px)`;
+    anime({
+      targets: mark["tag"],
+      top: `calc(${percentage}vh - 30px)`,
+      easing: "easeInOutQuad",
+    });
   }
 }
