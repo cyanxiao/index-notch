@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "icons": {
     "48": "../icons/bookmark-48.png",
-    "96": "../icons/bookmark-96.png"
+    "96": "../icons/bookmark-96.png",
+    "128": "../icons/bookmark-128.png"
   },
   "content_scripts": [
     {
@@ -19,7 +20,7 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "permissions": ["tabs"],
+  "permissions": ["activeTab"],
   "action": {
     "default_popup": "../popup/index.html"
   },
