@@ -6,7 +6,7 @@ Index Notch helps you annotate scroll positions within webpages.
 
 ## How to use
 
-1. Install from Chrome Web Extension Store or Github release page (in which case you should follow this installation guide).
+1. Install from <del>Chrome Web Extension Store</del> or Github release page (in which case you should follow this [installation guide](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked)).
 2. `control` + `b` to add a mark.
 3. Click the mark once you want to scroll back to the location.
 4. Right-click to delete.
