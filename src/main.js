@@ -28,9 +28,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   );
   if (request.mark === "current") {
     console.log("button click detected");
-    console.log(getScrollPercentage());
-    addTag(getScrollPercentage());
-    sendResponse({ isAdd: "true" });
+    addTag(getWindowYScroll(), getWindowHeight(), getDocHeight());
+    updateMarksPosition();
   }
 });
 
