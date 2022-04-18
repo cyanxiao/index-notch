@@ -10,13 +10,7 @@ document.documentElement.style.scrollBehavior = "smooth";
 document.addEventListener("keydown", function shortcutDetected(event) {
   if (event.ctrlKey && event.key == "b") {
     console.log("shortcut detected");
-    console.log(getScrollPercentage());
-    addTag(
-      getWindowYScroll(),
-      getWindowHeight(),
-      getDocHeight(),
-      getScrollPercentage
-    );
+    addTag(getWindowYScroll(), getWindowHeight(), getDocHeight());
   }
 });
 

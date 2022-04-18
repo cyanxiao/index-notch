@@ -1,7 +1,8 @@
 import getRandomColor from "./color";
 import anime from "animejs/lib/anime.es.js";
+import getScrollPercentage from "./scroll";
 
-function addTag(windowYScroll, windowHeight, docHeight, getScrollPercentage) {
+function addTag(windowYScroll, windowHeight, docHeight) {
   const tag = document.createElement("div");
   let percentage = getScrollPercentage(windowYScroll, windowHeight, docHeight);
   tag.style.width = "80px";
