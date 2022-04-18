@@ -1,6 +1,7 @@
 import getScrollPercentage from "./scroll";
 import { getWindowYScroll, getDocHeight, getWindowHeight } from "./scroll";
 import addTag from "./addTag";
+import { saveMark, marks } from "./storage";
 
 document.documentElement.style.scrollBehavior = "smooth";
 
@@ -11,6 +12,7 @@ document.addEventListener("keydown", function shortcutDetected(event) {
   if (event.ctrlKey && event.key == "b") {
     console.log("shortcut detected");
     addTag(getWindowYScroll(), getWindowHeight(), getDocHeight());
+    updateMarksPosition();
   }
 });
 
@@ -30,3 +32,17 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     sendResponse({ isAdd: "true" });
   }
 });
+
+/**
+ * Refresh all marks position
+ */
+function updateMarksPosition() {
+  for (let mark of marks) {
+    let percentage = getScrollPercentage(
+      mark["yScroll"],
+      mark["windowHeight"],
+      getDocHeight()
+    );
+    mark["tag"].style.top = `calc(${percentage}vh - 30px)`;
+  }
+}

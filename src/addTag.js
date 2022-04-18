@@ -1,9 +1,10 @@
 import getRandomColor from "./color";
 import anime from "animejs/lib/anime.es.js";
 import getScrollPercentage from "./scroll";
+import { saveMark, marks } from "./storage";
 
 function addTag(windowYScroll, windowHeight, docHeight) {
-  const tag = document.createElement("div");
+  let tag = document.createElement("div");
   let percentage = getScrollPercentage(windowYScroll, windowHeight, docHeight);
   tag.style.width = "80px";
   tag.style.height = "30px";
@@ -34,6 +35,7 @@ function addTag(windowYScroll, windowHeight, docHeight) {
     event.preventDefault();
     tag.remove();
   });
+  saveMark(windowYScroll, windowHeight, tag);
 }
 
 export default addTag;

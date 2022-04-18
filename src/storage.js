@@ -1,9 +1,16 @@
 import { getWindowYScroll, getDocHeight } from "./scroll";
 
-function markProperty(serialNumber, yScroll, tag) {
-  this.serialNumber = serialNumber;
+function markProperty(yScroll, windowHeight, tag) {
   this.yScroll = yScroll;
+  this.windowHeight = windowHeight;
   this.tag = tag;
 }
 
-export { markProperty };
+let marks = [];
+
+function saveMark(yScroll, windowHeight, tag) {
+  marks.push(new markProperty(yScroll, windowHeight, tag));
+  console.log(marks);
+}
+
+export { saveMark, marks };
