@@ -1,8 +1,9 @@
 import getRandomColor from "./color";
 import anime from "animejs/lib/anime.es.js";
 
-function addTag([percentage, scrollY]) {
+function addTag(windowYScroll, windowHeight, docHeight, getScrollPercentage) {
   const tag = document.createElement("div");
+  let percentage = getScrollPercentage(windowYScroll, windowHeight, docHeight);
   tag.style.width = "80px";
   tag.style.height = "30px";
   tag.style.position = "fixed";
@@ -26,7 +27,7 @@ function addTag([percentage, scrollY]) {
     });
   });
   tag.addEventListener("click", function scroll() {
-    window.scrollTo(0, scrollY);
+    window.scrollTo(0, windowYScroll);
   });
   tag.addEventListener("contextmenu", function rightClick(event) {
     event.preventDefault();

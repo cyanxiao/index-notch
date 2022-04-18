@@ -1,4 +1,5 @@
 import getScrollPercentage from "./scroll";
+import { getWindowYScroll, getDocHeight, getWindowHeight } from "./scroll";
 import addTag from "./addTag";
 
 document.documentElement.style.scrollBehavior = "smooth";
@@ -10,7 +11,12 @@ document.addEventListener("keydown", function shortcutDetected(event) {
   if (event.ctrlKey && event.key == "b") {
     console.log("shortcut detected");
     console.log(getScrollPercentage());
-    addTag(getScrollPercentage());
+    addTag(
+      getWindowYScroll(),
+      getWindowHeight(),
+      getDocHeight(),
+      getScrollPercentage
+    );
   }
 });
 
