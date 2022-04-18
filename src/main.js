@@ -3,18 +3,18 @@ import { getWindowYScroll, getDocHeight, getWindowHeight } from "./scroll";
 import addTag from "./addTag";
 import { marks } from "./storage";
 import anime from "animejs/lib/anime.es.js";
+import hotkeys from "hotkeys-js";
 
 document.documentElement.style.scrollBehavior = "smooth";
 
 /**
  * Detect shortcut to add position mark
  */
-document.addEventListener("keydown", function shortcutDetected(event) {
-  if (event.ctrlKey && event.key == "b") {
-    console.log("shortcut detected");
-    addTag(getWindowYScroll(), getWindowHeight(), getDocHeight());
-    updateMarksPosition();
-  }
+hotkeys("ctrl+b", function (event, handler) {
+  event.preventDefault();
+  console.log("shortcut detected");
+  addTag(getWindowYScroll(), getWindowHeight(), getDocHeight());
+  updateMarksPosition();
 });
 
 /**
