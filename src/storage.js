@@ -1,3 +1,9 @@
-import { _get_window_Yscroll, _get_doc_height } from "./scroll";
+import { getWindowYScroll, getDocHeight } from "./scroll";
 
-let tagPositions = [];
+function markProperty(serialNumber, yScroll, tag) {
+  this.serialNumber = serialNumber;
+  this.yScroll = yScroll;
+  this.tag = tag;
+}
+
+export { markProperty };

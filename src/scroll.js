@@ -1,7 +1,7 @@
 /**
- * Get current browser viewpane heigtht
+ * Get current browser viewport height
  */
-function _get_window_height() {
+function getWindowHeight() {
   return (
     window.innerHeight ||
     document.documentElement.clientHeight ||
@@ -13,7 +13,7 @@ function _get_window_height() {
 /**
  * Get current absolute window scroll position
  */
-function _get_window_Yscroll() {
+function getWindowYScroll() {
   return (
     window.pageYOffset ||
     document.body.scrollTop ||
@@ -25,7 +25,7 @@ function _get_window_Yscroll() {
 /**
  * Get current absolute document height
  */
-function _get_doc_height() {
+function getDocHeight() {
   return Math.max(
     document.body.scrollHeight || 0,
     document.documentElement.scrollHeight || 0,
@@ -41,10 +41,10 @@ function _get_doc_height() {
  */
 function getScrollPercentage() {
   return [
-    ((_get_window_Yscroll() + _get_window_height()) / _get_doc_height()) * 100,
-    _get_window_Yscroll(),
+    ((getWindowYScroll() + getWindowHeight()) / getDocHeight()) * 100,
+    getWindowYScroll(),
   ];
 }
 
 export default getScrollPercentage;
-export { _get_window_Yscroll, _get_doc_height };
+export { getWindowYScroll, getDocHeight };
