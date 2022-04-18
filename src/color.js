@@ -1,3 +1,5 @@
+import { marks } from "./storage";
+
 let colorScheme = ["#142d3b", "#ed9118", "#e74f23", "#f6b95b", "#d7d5d6"];
 
 function _getRandomInt(max) {
@@ -5,7 +7,7 @@ function _getRandomInt(max) {
 }
 
 function getRandomColor() {
-  return colorScheme[_getRandomInt(colorScheme.length)];
+  return colorScheme[marks.length % colorScheme.length];
 }
 
 export default getRandomColor;
