@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Index Notch",
-  "description": "Keep and review your scroll location with a click",
-  "version": "0.0",
+  "description": "Index Notch helps you annotates scrolling positions within webpages.",
+  "version": "0.0.1",
   "icons": {
     "48": "../icons/bookmark-48.png",
     "96": "../icons/bookmark-96.png"
