@@ -11,9 +11,9 @@ addMarkButton.addEventListener("mousedown", function addMark() {
   });
 });
 
-let snsButton = document.getElementById("sns");
+let snsButton = document.getElementById("hp");
 snsButton.addEventListener("mousedown", function openSNS() {
-  chrome.tabs.create({ url: "https://twitter.com/real_chell" });
+  chrome.tabs.create({ url: "https://indexnotch.vercel.app/" });
 });
 
 let ghButton = document.getElementById("gh");
