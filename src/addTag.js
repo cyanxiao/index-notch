@@ -29,7 +29,10 @@ function addTag(windowYScroll, windowHeight, docHeight) {
     });
   });
   tag.addEventListener("click", function scroll() {
-    window.scrollTo(0, windowYScroll);
+    window.scrollTo({
+      top: windowYScroll,
+      behavior: "smooth",
+    });
   });
   tag.addEventListener("contextmenu", function rightClick(event) {
     event.preventDefault();

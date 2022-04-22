@@ -5,8 +5,6 @@ import { marks } from "./storage";
 import anime from "animejs/lib/anime.es.js";
 import hotkeys from "hotkeys-js";
 
-document.documentElement.style.scrollBehavior = "smooth";
-
 /**
  * Detect shortcut to add position mark
  */
