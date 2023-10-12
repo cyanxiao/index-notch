@@ -21,6 +21,6 @@
   "dependencies": {
     "animejs": "^3.2.1",
     "hotkeys-js": "^3.8.9",
-    "postcss": "^8.4.12"
+    "postcss": "^8.4.31"
   }
 }
